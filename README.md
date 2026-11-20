@@ -8,6 +8,8 @@ An offline web app that is the best guide and tracker for the 55 PlayStation 5
 trophies of Grand Theft Auto VI — built for the
 [make.fun GTA 6 trophy guide bounty](https://make.fun/bounty/gta6-trophy-guide-01).
 
+**Try it live:** https://hibikazen.github.io/makefun-gta6-trophy-guide-01/app/ — no install, just open in desktop Chrome.
+
 ## What it is
 
 - **Every one of the 55 official trophies**, by exact name, with its official
