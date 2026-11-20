@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: checklist, roadmap to the platinum, missables, and a cited guide to each trophy.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23171035'/%3E%3Cpath d='M16 5l2.4 5.4 5.9.5-4.5 3.9 1.4 5.7L16 17.4l-5.2 3.1 1.4-5.7-4.5-3.9 5.9-.5z' fill='%23ffb03d'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; Works offline</p>
+    <h1>Leonida Platinum</h1>
+    <p class="tagline">All 55 official trophies — tracked, guided, and yours to tick off. No account, no network, no ads.</p>
+    <div class="progress" id="progress" aria-live="polite">
+      <div class="progress-big"><span id="earned-count">0</span><span class="progress-of"> / 55 earned</span><span class="progress-pct" id="earned-pct">0%</span></div>
+      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="grade-chips" id="grade-chips"></div>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Guide views">
+  <a href="#checklist" data-view="checklist" id="tab-checklist">Checklist</a>
+  <a href="#roadmap" data-view="roadmap" id="tab-roadmap">Roadmap</a>
+  <a href="#missables" data-view="missables" id="tab-missables">Missables</a>
+  <a href="#about" data-view="about" id="tab-about">About &amp; Sources</a>
+</nav>
+
+<main>
+  <section class="view" id="view-checklist" aria-label="Trophy checklist">
+    <div class="toolbar">
+      <label class="search-label">Search <input id="search" type="search" placeholder="Name, description, or guide text…" autocomplete="off"></label>
+      <div class="chip-row" id="kind-chips" role="group" aria-label="Filter by kind"></div>
+      <div class="toolbar-row">
+        <label>Grade
+          <select id="grade-filter">
+            <option value="all">All grades</option>
+            <option value="platinum">Platinum</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="bronze">Bronze</option>
+          </select>
+        </label>
+        <label>Status
+          <select id="status-filter">
+            <option value="all">Earned &amp; not yet</option>
+            <option value="earned">Earned only</option>
+            <option value="unearned">Not yet earned</option>
+          </select>
+        </label>
+        <label class="spoiler-toggle"><input id="spoiler" type="checkbox" checked> Hide story spoilers</label>
+        <span class="toolbar-spacer"></span>
+        <button id="export-btn" type="button">Export progress</button>
+        <label class="import-btn">Import progress <input id="import-file" type="file" accept="application/json,.json"></label>
+        <button id="reset-btn" type="button" class="quiet">Reset</button>
+      </div>
+      <p class="toolbar-note" id="list-note" aria-live="polite"></p>
+      <p class="toolbar-note" id="import-note" aria-live="polite"></p>
+    </div>
+    <div class="trophy-list" id="trophy-list"></div>
+  </section>
+
+  <section class="view" id="view-roadmap" aria-label="Roadmap to the platinum" hidden>
+    <div class="roadmap-intro">
+      <h2>The road to the platinum</h2>
+      <p id="roadmap-summary"></p>
+    </div>
+    <div id="roadmap-steps"></div>
+  </section>
+
+  <section class="view" id="view-missables" aria-label="Missable trophies" hidden>
+    <div class="missables-intro">
+      <h2>Missables: one to watch</h2>
+      <p>PowerPyx flags a single trophy as possibly missable, and Push Square lists none. Everything else in the set can be earned after the story in free roam — including the strands that look missable. This page names the one to protect and clears up the false alarms.</p>
+    </div>
+    <div id="missable-list"></div>
+    <div class="false-alarms">
+      <h3>Looks missable, but isn&rsquo;t</h3>
+      <ul id="false-alarms-list"></ul>
+    </div>
+  </section>
+
+  <section class="view" id="view-about" aria-label="About and sources" hidden>
+    <h2>About this guide</h2>
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>The list at a glance</h3>
+        <dl class="facts" id="facts-list"></dl>
+      </div>
+      <div class="about-card">
+        <h3>How to use the tracker</h3>
+        <ul>
+          <li>Tick a trophy&rsquo;s box when you earn it. Progress saves in this browser automatically.</li>
+          <li>Counted trophies (stunts, vehicles, meditations…) have a counter in their guide — set it as you go.</li>
+          <li>Export downloads your progress as a file; Import reads one back, on this or another computer.</li>
+          <li>Hide story spoilers keeps the 12 story trophies&rsquo; names and descriptions hidden until you earn them.</li>
+          <li>Everything runs from these files alone. The app fetches nothing — the only network use is a source link you choose to follow.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="about-card sources-card">
+      <h3>Sources</h3>
+      <p>Names, descriptions and grades are the official list as PlayStation publishes it, as listed by Exophase and PSNProfiles (the two agree on every name, description and grade). Methods come from the guides below, paraphrased in our own words — never copied. Where no guide has confirmed a method, this guide says so instead of guessing.</p>
+      <ul class="sources-list" id="sources-list"></ul>
+      <p class="verify-note" id="verify-note"></p>
+    </div>
+    <p class="disclaimer">An unofficial fan guide. Grand Theft Auto, GTA and Rockstar Games are trademarks of their owners; this guide uses no Rockstar logo or artwork. Trophy names and descriptions are shown as PlayStation publishes them; all guide text is original to this entry.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Platinum — an offline GTA VI trophy guide &amp; tracker. Built for the <a href="https://make.fun/bounty/gta6-trophy-guide-01">make.fun GTA 6 trophy guide bounty</a>. Source: <a href="https://github.com/hibikazen/makefun-gta6-trophy-guide-01">hibikazen/makefun-gta6-trophy-guide-01</a> (MIT).</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
